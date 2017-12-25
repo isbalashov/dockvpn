@@ -5,10 +5,13 @@
  
 Quick instructions:
 
+
+
 ```bash
-CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp umputun/dockvpn)
-docker run -t -i -p 8080:8080 --volumes-from $CID umputun/dockvpn serveconfig
+CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp isbalashov/dockvpn)
+docker run -t -i -p 8080:8080 --volumes-from $CID isbalashov/dockvpn serveconfig
 ```
+
 
 Now download the file located at the indicated URL. You will get a
 certificate warning, since the connection is done over SSL, but we are
