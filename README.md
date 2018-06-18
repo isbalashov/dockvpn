@@ -8,8 +8,8 @@ Quick instructions:
 
 
 ```bash
-CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp isbalashov/dockvpn)
-docker run -t -i -p 8080:8080 --network=host --restart=always --volumes-from $CID isbalashov/dockvpn serveconfig
+CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp --network=host --restart=always isbalashov/dockvpn)
+docker run -t -i -p 8080:8080  --volumes-from $CID isbalashov/dockvpn serveconfig
 ```
 
 
